@@ -42,14 +42,10 @@ This is a Streamlit-based web application that classifies flowers from uploaded 
 *   `requirements.txt`: List of Python dependencies.
 
 ## What would I do differently for a production deployment?
-*Serving Infrastructure: Wrap the model in a high-performance framework like FastAPI to expose it as a REST API, enabling integration with mobile and web applications.
-
-*Model Optimization: Convert the PyTorch model to ONNX format and apply Int8 Quantization. This would significantly reduce latency and memory usage compared to the current FP32 implementation. But this depends on the devices and the number of user, if the devices is very and old and large number of user, optimization is needed, if not, then it is fine.
-
-*Containerization: Package the application using Docker to ensure consistent environments across development and production, deploying via orchestration tools like Kubernetes for auto-scaling.
-
-*Modify the dataset by adding more train data to ensure the model perform better in all the classes, reduce overfiting and improve the model's generalization
-
-*Add segmentation model the exclude the background of the images and include only flower.
+* Serving Infrastructure: Wrap the model in a high-performance framework like FastAPI to expose it as a REST API, enabling integration with mobile and web applications.
+* Model Optimization: Convert the PyTorch model to ONNX format and apply Int8 Quantization. This would significantly reduce latency and memory usage compared to the current FP32 implementation. But this depends on the devices and the number of user, if the devices is very and old and large number of user, optimization is needed, if not, then it is fine.
+* Containerization: Package the application using Docker to ensure consistent environments across development and production, deploying via orchestration tools like Kubernetes for auto-scaling.
+* Modify the dataset by adding more train data to ensure the model perform better in all the classes, reduce overfiting and improve the model's generalization
+* Add segmentation model the exclude the background of the images and include only flower.
 
 
