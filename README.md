@@ -47,6 +47,7 @@ This is a Streamlit-based web application that classifies flowers from uploaded 
 * Containerization: Package the application using Docker to ensure consistent environments across development and production, deploying via orchestration tools like Kubernetes for auto-scaling.
 * Modify the dataset by adding more train data to ensure the model perform better in all the classes, reduce overfiting and improve the model's generalization
 * Add segmentation model the exclude the background of the images and include only flower.
+* Dropout could be added to lessen overfitting (unable to test, due to time constraint)
 * the ui could also be further improved.
 * Chatbot could also be implemented to explain the characteristic of each of the flower, or even explain the model itself, to clarify them to the users.
 
