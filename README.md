@@ -11,7 +11,7 @@ This is a Streamlit-based web application that classifies flowers from uploaded 
 
 ## Prerequisites
 
-*   Python 3.x
+*   Python 3.11.9
 
 ## Installation
 
@@ -30,7 +30,7 @@ This is a Streamlit-based web application that classifies flowers from uploaded 
     streamlit run app.py
     ```
 
-2.  Open your web browser and navigate to the URL shown in the terminal (usually `http://localhost:8501`).
+2.  Open your web browser and navigate to the URL shown in the terminal.
 3.  Upload an image of a flower to see the classification results.
 
 ## Project Structure
