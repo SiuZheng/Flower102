@@ -11,7 +11,7 @@ This is a Streamlit-based web application that classifies flowers from uploaded 
 
 ## Prerequisites
 
-*   Python 3.x
+*   Python 3.11.9
 
 ## Installation
 
@@ -30,7 +30,7 @@ This is a Streamlit-based web application that classifies flowers from uploaded 
     streamlit run app.py
     ```
 
-2.  Open your web browser and navigate to the URL shown in the terminal (usually `http://localhost:8501`).
+2.  Open your web browser and navigate to the URL shown in the terminal.
 3.  Upload an image of a flower to see the classification results.
 
 ## Project Structure
@@ -40,3 +40,14 @@ This is a Streamlit-based web application that classifies flowers from uploaded 
 *   `configs/`: Contains configuration files, such as class names.
 *   `notebooks/`: Jupyter notebooks used for model training and analysis.
 *   `requirements.txt`: List of Python dependencies.
+
+## What would I do differently for a production deployment?
+* Serving Infrastructure: Wrap the model in a high-performance framework like FastAPI to expose it as a REST API, enabling integration with mobile and web applications.
+* Model Optimization: Convert the PyTorch model to ONNX format and apply Int8 Quantization. This would significantly reduce latency and memory usage compared to the current FP32 implementation. But this depends on the devices and the number of user, if the devices is very old and large scale of user, optimization is needed, if not, then it is fine.
+* Containerization: Package the application using Docker to ensure consistent environments across development and production, deploying via orchestration tools like Kubernetes for auto-scaling.
+* Modify the dataset by adding more train data to ensure the model perform better in all the classes, reduce overfiting and improve the model's generalization
+* Add segmentation model the exclude the background of the images and include only flower.
+* the ui could also be further improved.
+* Chatbot could also be implemented to explain the characteristic of each of the flower, or even explain the model itself, to clarify them to the users.
+
+
