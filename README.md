@@ -1,6 +1,6 @@
 # Flower Classification App
 
-This is a Streamlit-based web application that classifies flowers from uploaded images using a Deep Learning model.
+This is a Streamlit-based web application that classifies flowers from uploaded images using ResNet50 model.
 
 ## Features
 
